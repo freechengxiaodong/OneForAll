@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gate-way" />
+        <module name="spring-jpa" />
+        <module name="provider-two" />
+        <module name="dubbo-account" />
+        <module name="netty-client" />
+        <module name="eureka" />
+        <module name="tools" />
+        <module name="sso" />
+        <module name="netty-server" />
+        <module name="dubbo-payment" />
+        <module name="security" />
+        <module name="sso-client-two" />
+        <module name="common" />
+        <module name="sso-server" />
+        <module name="payment" />
+        <module name="treasure" />
+        <module name="netty" />
+        <module name="quartz" />
+        <module name="zuul" />
+        <module name="api-gateway" />
+        <module name="sso-client-one" />
+        <module name="provider-one" />
+        <module name="account" />
+        <module name="treasure-auth" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account" target="1.5" />
+      <module name="api-gateway" target="1.5" />
+      <module name="common" target="1.5" />
+      <module name="dubbo-account" target="1.5" />
+      <module name="dubbo-payment" target="1.5" />
+      <module name="eureka" target="1.5" />
+      <module name="gate-way" target="1.5" />
+      <module name="gateway" target="1.5" />
+      <module name="hogwarts" target="1.5" />
+      <module name="netty" target="1.5" />
+      <module name="netty-client" target="1.5" />
+      <module name="netty-server" target="1.5" />
+      <module name="payment" target="1.5" />
+      <module name="provider-one" target="1.5" />
+      <module name="provider-two" target="1.5" />
+      <module name="quartz" target="1.5" />
+      <module name="security" target="1.5" />
+      <module name="spring-jpa" target="1.5" />
+      <module name="sso" target="1.5" />
+      <module name="sso-client-one" target="1.5" />
+      <module name="sso-client-two" target="1.5" />
+      <module name="sso-server" target="1.5" />
+      <module name="tools" target="1.5" />
+      <module name="treasure" target="1.5" />
+      <module name="treasure-auth" target="1.5" />
+      <module name="zuul" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="dubbo-account" options="-parameters" />
+      <module name="dubbo-payment" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="gate-way" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="hogwarts" options="-parameters" />
+      <module name="netty" options="-parameters" />
+      <module name="netty-client" options="-parameters" />
+      <module name="netty-server" options="-parameters" />
+      <module name="payment" options="-parameters" />
+      <module name="provider-one" options="-parameters" />
+      <module name="provider-two" options="-parameters" />
+      <module name="quartz" options="-parameters" />
+      <module name="security" options="-parameters" />
+      <module name="spring-jpa" options="-parameters" />
+      <module name="sso" options="-parameters" />
+      <module name="sso-client-one" options="-parameters" />
+      <module name="sso-client-two" options="-parameters" />
+      <module name="sso-server" options="-parameters" />
+      <module name="tools" options="-parameters" />
+      <module name="treasure" options="-parameters" />
+      <module name="treasure-auth" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

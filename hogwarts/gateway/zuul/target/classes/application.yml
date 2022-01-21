@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ZUUL
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka
+  instance:
+    hostname: localhost
+
+# URL pattern
+# 使用路径方式匹配路由规则。
+# 参数key结构： zuul.routes.customName.path=xxx
+# 用于配置路径匹配规则。
+# 其中customName自定义。通常使用要调用的服务名称，方便后期管理
+# 可使用的通配符有： * ** ?
+# ? 单个字符
+# * 任意多个字符，不包含多级路径
+# ** 任意多个字符，包含多级路径
+zuul:
+  routes:
+    #customName: PROVIDER-TWO
+    eureka-application-service:
+      path: /api/**
+      url: http://127.0.0.1:8222/   #url用于配置符合path的请求路径路由到的服务地址。
+      #serviceId: PROVIDER-TWO
+

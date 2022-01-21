@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-account/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo-payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gate-way/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-client-one/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-client-one/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-client-two/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-client-two/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso/sso-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/treasure-auth/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

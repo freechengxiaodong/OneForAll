@@ -1,0 +1,22 @@
+
+server:
+  port: 7777
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: sso-client-one
+
+auth-server: http://localhost:8888/sso
+
+security:
+  oauth2:
+    client:
+      client-id: sso-two
+      client-secret: 123456
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      access-token-uri: ${auth-server}/oauth/token
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key

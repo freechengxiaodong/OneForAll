@@ -1,0 +1,71 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: tools
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+
+  #redis YML文件配置相关
+  redis:
+    database: 0                   # 连接工厂使用的数据库索引,redis默认有16个db,索引0-15
+    host: 172.27.85.46
+    port: 6379
+    password: 123456              # 登录redis服务器的密码,无设置密码可以不填写
+    timeout: 30000                # 连接超时（毫秒）
+    #sentinel:
+      #master: mymaster            # 哨兵配置过程中,给主机命名的名字
+      #nodes: 172.27.85.46:6379    # 哨兵,配置多个 都好隔开 如：ip1:port1,ip2:port2,ip3:port3
+    lettuce:
+      pool:
+        max-active: 8             # 给定时间池可以分配的最大连接数 使用负值为无限制
+        max-wait: -1              # 连接分配在池耗尽之前在抛出异常之前应阻止的最大时间量（连接池最大阻塞等待时间以毫秒为单位） 使用负值无限期地阻止
+        max-idle: 8               # 连接池中的最大空闲连接 使用负值来表示无限数量的空闲连接
+        min-idle: 0               # 连接池中的最小空闲连接 此设置只有在正值时才有效果
+
+    #redis properties文件配置相关
+    #  # 连接工厂使用的数据库索引,redis默认有16个db,索引0-15
+    #  spring.redis.database= 0
+    #  # 哨兵配置过程中,给主机命名的名字
+    #  spring.redis.sentinel.master=mymaster
+    #  # 哨兵,配置多个 都好隔开
+    #  spring.redis.sentinel.nodes=ip1:port1,ip2:port2,ip3:port3
+    #  # 登录redis服务器的密码,无设置密码可以不填写
+    #  spring.redis.password=password
+    #  # 给定时间池可以分配的最大连接数 使用负值为无限制
+    #  spring.redis.lettuce.pool.max-active= 8
+    #  # 连接分配在池耗尽之前在抛出异常之前应阻止的最大时间量（连接池最大阻塞等待时间以毫秒为单位） 使用负值无限期地阻止
+    #  spring.redis.lettuce.pool.max-wait= -1
+    #  # 连接池中的最大空闲连接 使用负值来表示无限数量的空闲连接
+    #  spring.redis.lettuce.pool.max-idle= 8
+    #  # 连接池中的最小空闲连接 此设置只有在正值时才有效果
+    #  spring.redis.lettuce.pool.min-idle= 0
+    #  # 连接超时（毫秒）
+    #  spring.redis.timeout=30000
+
+# 这里我们是自己去实例化jedis的相关Bean（JedisPoolConfig、JedisPool...），并没有使用到RedisTemplate
+# 所以并不需要像网上一些教程那样配置在spring节点下（spring.redis.jedis.pool.max-active...）
+jedis:
+  host: 172.27.85.46
+  password: 123456
+  port: 6379
+  timeout: 2000
+  maxTotal: 15 # 最大连接数
+  maxIdle: 10 # 最大空闲连接
+  minIdle: 5 # 最小空闲连接
+  maxWaitMillis: 10000 # 获取连接最大等待时间
+  testOnBorrow: true # 获取连接时检测是否可用
+
+demo:
+  name: 默认名称
+  age: 111
+demo-two:
+  name: demo-two
+  age: 222
+
+#开发环境可注释
+#logging:
+#  config: classpath:lomback.xml

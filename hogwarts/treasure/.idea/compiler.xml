@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sso-client-one" />
+        <module name="payment" />
+        <module name="account" />
+        <module name="sso-server" />
+        <module name="sso-client-two" />
+        <module name="dubbo-account" />
+        <module name="dubbo-payment" />
+        <module name="sso" />
+        <module name="gate-way" />
+        <module name="treasure-auth" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account" target="1.8" />
+      <module name="dubbo-account" target="1.8" />
+      <module name="dubbo-payment" target="1.8" />
+      <module name="gate-way" target="1.8" />
+      <module name="payment" target="1.8" />
+      <module name="sso" target="1.8" />
+      <module name="sso-client-one" target="1.8" />
+      <module name="sso-client-two" target="1.8" />
+      <module name="sso-server" target="1.8" />
+      <module name="treasure" target="1.8" />
+      <module name="treasure-auth" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account" options="-parameters" />
+      <module name="dubbo-account" options="-parameters" />
+      <module name="dubbo-payment" options="-parameters" />
+      <module name="gate-way" options="-parameters" />
+      <module name="payment" options="-parameters" />
+      <module name="sso" options="-parameters" />
+      <module name="sso-client-one" options="-parameters" />
+      <module name="sso-client-two" options="-parameters" />
+      <module name="sso-server" options="-parameters" />
+      <module name="treasure" options="-parameters" />
+      <module name="treasure-auth" options="-parameters" />
+    </option>
+  </component>
+</project>

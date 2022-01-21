@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 172.27.85.46:8848
+      discovery:
+        server-addr: 172.27.85.46:8848
+    #circuitbreaker:
+      #hystrix:
+        #enabled: true
+    gateway:
+      httpclient:
+        # 网关转发到其他微服务的 HTTP 连接超时为 5000ms
+        connect-timeout: 5000
+        # 网关转发到其他微服务的 HTTP 响应超时为 500ms
+        response-timeout: 60000
+      discovery:
+        locator:
+          enabled: true
+#      routes:
+#        - id: payment-router
+#          uri: lb://payment-service
+#          predicates:
+#            - Path=/pay/**
+#          filters:
+#            - name: RequestRateLimiter #限流
+#              args:
+#                redis-rate-limiter.replenishRate: 1
+#                redis-rate-limiter.burstCapacity: 5 #1秒钟最大请求数为5 否则返回http code 429 太多Too Many Requests
+#                key-resolver: '#{@ipKeyResolver}'
+      default-filters:
+        - name: Hystrix
+          args:
+            name: defaultFallBack
+            fallbackUri: 'forward:/defaultFallBack'
+
+feign:
+  circuitbreaker:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+hystrix:
+  command:
+    defaultFallBack:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 2000

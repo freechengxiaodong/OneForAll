@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/account/account.iml" filepath="$PROJECT_DIR$/account/account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-account/dubbo-account.iml" filepath="$PROJECT_DIR$/dubbo-account/dubbo-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-payment/dubbo-payment.iml" filepath="$PROJECT_DIR$/dubbo-payment/dubbo-payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gate-way/gate-way.iml" filepath="$PROJECT_DIR$/gate-way/gate-way.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment/payment.iml" filepath="$PROJECT_DIR$/payment/payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso.iml" filepath="$PROJECT_DIR$/sso/sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-client-one/sso-client-one.iml" filepath="$PROJECT_DIR$/sso/sso-client-one/sso-client-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-client-two/sso-client-two.iml" filepath="$PROJECT_DIR$/sso/sso-client-two/sso-client-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-server/sso-server.iml" filepath="$PROJECT_DIR$/sso/sso-server/sso-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure.iml" filepath="$PROJECT_DIR$/treasure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure-auth/treasure-auth.iml" filepath="$PROJECT_DIR$/treasure-auth/treasure-auth.iml" />
+    </modules>
+  </component>
+</project>

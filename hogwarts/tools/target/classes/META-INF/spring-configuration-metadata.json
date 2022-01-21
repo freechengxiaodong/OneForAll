@@ -1,0 +1,94 @@
+{
+  "groups": [
+    {
+      "name": "demo-four",
+      "type": "com.tools.config.properties.DemoFour",
+      "sourceType": "com.tools.config.properties.DemoFour"
+    },
+    {
+      "name": "demo-two",
+      "type": "com.tools.config.properties.DemoTwo",
+      "sourceType": "com.tools.config.properties.DemoTwo"
+    },
+    {
+      "name": "jedis",
+      "type": "com.tools.config.JedisProperty",
+      "sourceType": "com.tools.config.JedisProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "demo-four.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.properties.DemoFour"
+    },
+    {
+      "name": "demo-four.name",
+      "type": "java.lang.String",
+      "sourceType": "com.tools.config.properties.DemoFour"
+    },
+    {
+      "name": "demo-two.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.properties.DemoTwo"
+    },
+    {
+      "name": "demo-two.name",
+      "type": "java.lang.String",
+      "sourceType": "com.tools.config.properties.DemoTwo"
+    },
+    {
+      "name": "jedis.host",
+      "type": "java.lang.String",
+      "sourceType": "com.tools.config.JedisProperty"
+    },
+    {
+      "name": "jedis.max-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    },
+    {
+      "name": "jedis.max-total",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    },
+    {
+      "name": "jedis.max-wait-millis",
+      "type": "java.lang.Long",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    },
+    {
+      "name": "jedis.min-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    },
+    {
+      "name": "jedis.password",
+      "type": "java.lang.String",
+      "sourceType": "com.tools.config.JedisProperty"
+    },
+    {
+      "name": "jedis.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    },
+    {
+      "name": "jedis.test-on-borrow",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": false
+    },
+    {
+      "name": "jedis.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.tools.config.JedisProperty",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

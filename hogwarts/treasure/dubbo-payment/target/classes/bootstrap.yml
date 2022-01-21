@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: dubbo-payment-service
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: 172.27.85.46:8848
+      config:
+        server-addr: 172.27.85.46:8848
+        group: DEFAULT_GROUP
+        file-extension: properties

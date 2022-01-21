@@ -1,0 +1,20 @@
+server:
+  port: 8666
+
+spring:
+  application:
+    name: dubbo-account-service
+  profiles:
+    active: dev
+
+dubbo:
+  application:
+    #name=服务名
+    name: dubbo-account-service
+  protocol:
+    name: dubbo
+    port: -1   #dubbo服务暴露的端口 20880
+  registry:
+    #protocol: dubbo
+    #spring-cloud=托管到spring-cloud的注册中心，可改为nacos://10.21.32.22:123，但注册中心的每个dubbo服务会额外出现两个多余的服务，技术所限，原因未知。改为spring-cloud则无此毛病
+    address: nacos://172.27.85.46:8848

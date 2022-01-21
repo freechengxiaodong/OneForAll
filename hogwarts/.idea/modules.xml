@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/treasure/account/account.iml" filepath="$PROJECT_DIR$/treasure/account/account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/gateway/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/dubbo-account/dubbo-account.iml" filepath="$PROJECT_DIR$/treasure/dubbo-account/dubbo-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/dubbo-payment/dubbo-payment.iml" filepath="$PROJECT_DIR$/treasure/dubbo-payment/dubbo-payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/eureka/eureka.iml" filepath="$PROJECT_DIR$/gateway/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/gate-way/gate-way.iml" filepath="$PROJECT_DIR$/treasure/gate-way/gate-way.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hogwarts.iml" filepath="$PROJECT_DIR$/hogwarts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty-client/netty-client.iml" filepath="$PROJECT_DIR$/netty/netty-client/netty-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty-server/netty-server.iml" filepath="$PROJECT_DIR$/netty/netty-server/netty-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/payment/payment.iml" filepath="$PROJECT_DIR$/treasure/payment/payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/provider-one/provider-one.iml" filepath="$PROJECT_DIR$/gateway/provider-one/provider-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/provider-two/provider-two.iml" filepath="$PROJECT_DIR$/gateway/provider-two/provider-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz/quartz.iml" filepath="$PROJECT_DIR$/quartz/quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security/security.iml" filepath="$PROJECT_DIR$/security/security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-jpa/spring-jpa.iml" filepath="$PROJECT_DIR$/spring-jpa/spring-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso.iml" filepath="$PROJECT_DIR$/sso/sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-client-one/sso-client-one.iml" filepath="$PROJECT_DIR$/sso/sso-client-one/sso-client-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-client-two/sso-client-two.iml" filepath="$PROJECT_DIR$/sso/sso-client-two/sso-client-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-server/sso-server.iml" filepath="$PROJECT_DIR$/sso/sso-server/sso-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/treasure.iml" filepath="$PROJECT_DIR$/treasure/treasure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treasure/treasure-auth/treasure-auth.iml" filepath="$PROJECT_DIR$/treasure/treasure-auth/treasure-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/zuul/zuul.iml" filepath="$PROJECT_DIR$/gateway/zuul/zuul.iml" />
+    </modules>
+  </component>
+</project>

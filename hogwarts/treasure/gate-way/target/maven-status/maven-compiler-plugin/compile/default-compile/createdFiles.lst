@@ -1,0 +1,4 @@
+com\gateway\controller\FallbackController.class
+com\gateway\config\RateLimiterConfiguration.class
+com\gateway\config\RedisConfiguration.class
+com\gateway\GateWayApplication.class
