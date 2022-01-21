@@ -1,0 +1,10 @@
+server:
+  port: 8771
+  servlet:
+    context-path: /sso
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: sso-server

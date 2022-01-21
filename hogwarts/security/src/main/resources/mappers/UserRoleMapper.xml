@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.security.mapper.UserRoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.security.entity.UserRole">
+        <result column="rid" property="rid" />
+        <result column="uid" property="uid" />
+    </resultMap>
+
+    <select id="getUserRole" resultType="com.security.entity.Role">
+        select id,role_name,role_desc from sys_user_role ur left join sys_role r on ur.rid = r.id where ur.uid = #{uid}
+    </select>
+
+</mapper>

@@ -1,0 +1,10 @@
+server:
+  port: 8662
+
+spring:
+  application:
+    name: account-service
+  profiles:
+    active: dev
+
+sleep: 10

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+</style>
+<body>
+<form>
+    <textarea name="message" id="message" style="width: 1024px;height: 100px;" placeholder="请输入信息"></textarea>
+    <br/>
+    <input type="button" value="发送消息" onClick="send(this.form.message.value)"/>
+    <hr color="black"/>
+    <h3>服务端响应消息</h3>
+    <textarea id="responseMsg" style="width: 1024px;height: 300px;"></textarea>
+</form>
+<script type="text/javascript">
+    var socket;
+    if (!window.WebSocket) {
+        window.WebSocket = window.MozWebSocket;
+    }
+
+    if (window.WebSocket) {
+        socket = new WebSocket("ws://127.0.0.1:8099/channel");
+        socket.onmessage = function (event) {
+            console.log("客户端接收消息：" + event.data)
+            var responseMsg = document.getElementById('responseMsg');
+            responseMsg.value += event.data + "\r\n";
+        };
+        socket.onopen = function (event) {
+            console.log("客户端已经和Netty-WebSocket服务器建立连接")
+            var responseMsg = document.getElementById('responseMsg');
+            responseMsg.value = "客户端已经和Netty-WebSocket服务器建立连接";
+        };
+        socket.onclose = function (event) {
+            console.log("与Netty-WebSocket服务器的连接已经关闭")
+            var responseMsg = document.getElementById('responseMsg');
+            responseMsg.value = "与Netty-WebSocket服务器的连接已经关闭 \r\n";
+        };
+    } else {
+        alert("您的浏览器不支持WebSocket协议！");
+    }
+
+    function send(message) {
+        if (!window.WebSocket) {
+            return;
+        }
+        if (socket.readyState == WebSocket.OPEN) {
+            socket.send(message);
+        } else {
+            alert("WebSocket 连接没有建立成功！");
+        }
+    }
+</script>
+</body>
+</html>

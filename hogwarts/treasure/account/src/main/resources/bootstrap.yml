@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: account-service
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 172.27.85.46:8848
+      config:
+        server-addr: 172.27.85.46:8848
+        group: DEFAULT_GROUP
+        file-extension: properties
+    sentinel:
+      #sentinel可视化工具
+      eager: true
+      transport:
+        dashboard: 172.27.85.46:8849
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 172.27.85.46:8848
+            dataId: account-service-degrade-rules
+            data-type: json
+            rule-type: degrade
+
+feign:
+  client:
+    config:
+      default:
+        #建立连接所用的时间，适用于网络状况正常的情况下，两端连接所需要的时间
+        ConnectTimeOut: 2000
+        #指建立连接后从服务端读取到可用资源所用的时间
+        ReadTimeOut: 5000
+  sentinel:
+    enabled: true

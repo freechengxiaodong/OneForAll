@@ -1,0 +1,11 @@
+[
+  {
+    "resource": "GET:http://payment-service/pay/balance",
+    "count": 300,
+    "grade": 0,
+    "timeWindow": 5,
+    "statIntervalMs": 5000,
+    "minRequestAmount": 2,
+    "slowRatioThreshold": 0.5
+  }
+]

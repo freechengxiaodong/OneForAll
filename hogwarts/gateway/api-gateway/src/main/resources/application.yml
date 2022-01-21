@@ -1,0 +1,56 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 启用自动根据服务ID生成路由
+          lower-case-service-id: true # 设置路由的路径为小写的服务ID
+      routes:
+        - id: PROVIDER-TWO
+          uri: lb://PROVIDER-TWO
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1 # 移除前缀 youlai-auth
+        - id: PROVIDER-ONE
+          uri: lb://PROVIDER-ONE
+          predicates:
+            - Path=/v1/**
+          filters:
+            - StripPrefix=1
+      default-filters:
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback  #返回路径
+
+#hystrix配置
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            #断路器的超时时间ms,默认1000
+            timeoutInMilliseconds: 2000
+#      circuitBreaker:
+#        #是否启动熔断器，默认为true，false表示不要引入Hystrix。
+#        enabled: true
+#        #当在配置时间窗口内达到此数量的失败后，进行短路
+#        requestVolumeThreshold: 20
+#        #出错百分比阈值，当达到此阈值后，开始短路。默认50%）
+#        errorThresholdPercentage: 50%
+#        #短路多久以后开始尝试是否恢复，默认5s）-单位ms
+#        sleepWindowInMilliseconds: 30000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka
+  instance:
+    hostname: localhost

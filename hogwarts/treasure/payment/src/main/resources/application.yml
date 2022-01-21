@@ -1,0 +1,10 @@
+server:
+  port: 8661
+
+spring:
+  application:
+    name: payment-service
+  profiles:
+    active: dev
+
+sleep: 10

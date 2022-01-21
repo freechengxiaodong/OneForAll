@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "protected-resource",
+    "controlBehavior": 2,
+    "count": 1000,
+    "grade": 1,
+    "limitApp": "default",
+    "strategy": 0
+  }
+]

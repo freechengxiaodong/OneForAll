@@ -1,0 +1,20 @@
+server:
+  port: 8111
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: PROVIDER-ONE
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8000/eureka
+  instance:
+    hostname: localhost
+
+feign:
+  circuitbreaker:
+    enabled: true
+

@@ -1,0 +1,29 @@
+[{
+    "id": "account-router",
+    "order": 0,
+    "predicates": [{
+        "args": {
+            "pattern": "/acc/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://account-service"
+},{
+    "id": "payment-router",
+    "order": 2,
+    "filters": [{
+        "name": "RequestRateLimiter",
+        "args": {
+            "redis-rate-limiter.replenishRate": 1,
+            "redis-rate-limiter.burstCapacity": 5,
+            "key-resolver": "#{@ipKeyResolver}"
+        }
+	}],
+    "predicates": [{
+        "args": {
+            "pattern": "/pay/**"
+        },
+        "name": "Path"
+    }],
+    "uri": "lb://payment-service"
+}]

@@ -1,0 +1,27 @@
+server:
+  port: 8665
+
+spring:
+  application:
+    name: dubbo-payment-service
+  profiles:
+    active: dev
+
+dubbo:
+  application:
+    #name=服务名
+    name: dubbo-payment-service
+    # 项目访问端口
+    #qos-port: 8665
+  #consumer:
+    #check: false
+  scan:
+    # 上述的服务提供者的实现类所在的包
+    base-packages: com.dubbo.payment.service #扫描的包名
+  protocol:
+    name: dubbo
+    port: 20880   #dubbo服务暴露的端口 20880
+  registry:
+    #protocol: dubbo
+    #spring-cloud=托管到spring-cloud的注册中心，可改为nacos://10.21.32.22:123，但注册中心的每个dubbo服务会额外出现两个多余的服务，技术所限，原因未知。改为spring-cloud则无此毛病
+    address: nacos://172.27.85.46:8848
